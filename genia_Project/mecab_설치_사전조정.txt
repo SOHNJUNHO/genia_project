@@ -1,0 +1,31 @@
+
+
+1. 디렉토리 생성 + 가상환경 생성 + pip 설치 후
+
+2. https://konlpy.org/ko/latest/install/ 설명서에 따라 konlpy와 mecab 설치
+
+2. bash <(curl -s [https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh]
+
+(https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)) 한 줄이면 가능
+
+3. tmp 디렉토리에 생기는 'tmp/mecab-ko-dic-2.1.1-20180720' 이것이 mecab이 쓰는 사전.
+
+4. mv /tmp/mecab-ko-dic-2.1.1-20180720 . 명령어로 tmp/mecab-ko-dic-2.1.1-20180720 디렉토리를 쓰기 좋게 현재 디렉토리로 이동.
+
+5. mecab-ko-dic-2.1.1-20180720 안의 user-dic 디렉토리 안에 nnp.csv가 있다.
+
+6. 안에 구글이 예시로 들어있을 것. nnp_csv.txt 파일 복붙
+
+7. mecab-ko-dic-2.1.1-20180720 안의 tools 디렉토리 안에 있는 add-userdic.sh를 실행
+
+8. sudo make clean, make install 명령어 실행
+
+9. 사전 업데이트 완성
+
+10. 하지만 우선순위를 조정해 주어야 한다.
+
+11. 제대로 사전이 업데이트되었다면 mecab-ko-dic-2.1.1-20180720 안에 user-nnp.csv가 생겼을 것.
+
+12. 여기로 들어가 세번째 숫자를 낮춰주면 우선순위가 높아진다. 이곳에 user-nnp.csv를 복붙
+
+13. sudo make clean, make install

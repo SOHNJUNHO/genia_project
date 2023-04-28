@@ -1,0 +1,19 @@
+우분투 한글 깔기 
+
+sudo apt-get install fonts-nanum* --> 설치
+
+sudo apt install fontconfig
+
+fc-list --> 한글 설치된 경로 보여줌
+
+
+font_path = "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"
+font = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font)
+
+
+
+
+
+
+
